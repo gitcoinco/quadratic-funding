@@ -11,7 +11,7 @@ setuptools.setup(
     description='This is the open source quadratic funding implementation found on gitcoin.co/grants.',
     long_description='This is an open source implementation of quadratic funding, a design for philanthropic and publicly-funded seeding, which allows for optimal provisioning of funds to an ecosystem of public goods. You can find the live product implementation at gitcoin.co/grants',
     long_description_content_type='text/markdown',
-    url='insert github link',
+    url='https://github.com/gitcoinco/quadratic-funding',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
