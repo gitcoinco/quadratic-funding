@@ -4,7 +4,7 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='quadratic-funding',
+    name='quadratic_funding',
     version='0.0.1',
     author='Frank Chen, Aditya Anand Michael Chelliah, Kevin Owocki',
     author_email='team@gitcoin.co',
