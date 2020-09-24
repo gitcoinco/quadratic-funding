@@ -1,11 +1,12 @@
-# Quadratic Funding
+# Gitcoin Grants Quadratic Funding Implementation
+
+## Quadratic Funding
 
 This is an open source implementation of quadratic funding or liberal radicalism, a design for philanthropic and publicly-funded seeding which allows for optimal provisioning of funds to an ecosystem of public goods. 
 
 This concept was adapted from [a paper](https://poseidon01.ssrn.com/delivery.php?ID=660029082067073116118109064122080113007059056088020045126118025097091089104095118005013117053102018063007119114004031115071017112038078013065115004125088127124090068088040053112098119108124088124100127091000084029019003094031089072104067086002002114101&EXT=pdf) written by Vitalik Buterin, Zoë Hitzig and Glen Weyl of liberal radicalism fame.
 
-
-# How it Works
+## How Does It Work?
 
 The idea of a quadratic voting system was the starting point for Gitcoin's funding open source experiment.
 
@@ -25,34 +26,31 @@ Using LR/CLR in open source ideally helps to prevent the "tragedy of the commons
 
 LR puts an emphasis on the number of donations, rather than the size of the donation itself. This is the intended feature of the LR mechanism. Projects that can get more people to donate to them represent public goods that serve a larger public, so the tragedy of the commons problem is more severe, and hence, contributions to them should be multiplied more to compensate. 
 
-# Problems Observed (Rounds 1 & 2)
+## Problems Observed in Gitcoin Grants Rounds 1 & 2
 
 Sybil resistance: We know that grants which receive many small contributions result in a larger "top-off" value from the benefactor, incentivizing an attack vector to create multiple dummy accounts to try to confuse the system.
 
 Collusion: An attacker of the system could split up $100 into 10 people's hands, and thus achieve a much higher CLR match than deserved.
 
-Reliance on philanthropists: In practice, CLR still suffers from reliance on a benefactor or government, a part of the problem which it purports to solve. The paper simultaneously shows disappointment in OSS leaning on "proprietary corporate backing or directed, hierarchical government support", while acknowledging CLR still requires a benefactor. Is it possible for free markets dictate more funding towards public goods?
+Reliance on philanthropists: In practice, CLR still suffers from reliance on a benefactor or government, a part of the problem which it purports to solve. CLR still requires generous funding, either from corporate backing, direct government support, or private benefactors.
 
-Prior knowledge: One of the drawbacks of this entire experiment is the fact that once the mechanism is known, people will know how to game it.
+Prior knowledge: One of the drawbacks of the CLR experiment is the fact that once the mechanism is known, people will know how to game it.
 
-# Pairwise Mechanism (DRAFT)
+## Implementation Upgrade: The Pairwise Mechanism
 
-BENEFITS OF PAIRWISE
-number of donations matters more
-lump sum donations get represented less
-collusion can still happen, but it's much easier to find
+Vitalik writes of the [pairwise mechanism](https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553/9) that would help alleviate some of the collusion issues that we noticed with non-pairwise CLR matching.
 
-POSSIBLE GRAPH?
-num_contributions on the x-axis
-high_donation on the y-axis
-clr matching funds as size of the bubble
+With pairwise matching, the same rules for CLR still apply. The number of contributions, not the contribution amount matters more in terms of obtaining a higher match. But now, we make the assumption that the amount of funds a specific pair puts toward the same grant is evidence of how coordinated they are, and so the more grants both of them donate to, the more constricted the CLR match for that pair, under that grant. 
 
-ANALYSIS AID
-collusion with pairs is much easier to find (you can use something like time, date, geographical location, github age, by pair)
+From Vitalik's blog, we can compare the effect of the pairwise mechanism with varying thresholds against our original QF mechanism. This graph shows us that regardless of mechanisms, the number of contributions matters more than the contribution amount, and dictates that it generally penalizes projects that dominated by large contribution amounts:
 
-HOW DID PAIRWISE ALLEVIATE ROUND 1 & 2 PROBLEMS?
+<img src="https://user-images.githubusercontent.com/7516920/94086294-639c7400-fdbf-11ea-840e-a49c3593ff0d.png">
 
-# Problems Observed (Round 3-5)
+While collusion can still happen, it is much easier to find. Matching pairs gives us a signal to find colluders, which can subsequently be confirmed through timestamps, frequency of donations, geographical location, and github account age.
+
+## Problems Observed in Gitcoin Grants Rounds [3](https://vitalik.ca/general/2019/10/24/gitcoin.html), [4](https://vitalik.ca/general/2020/01/28/round4.html), & [5](https://vitalik.ca/general/2020/04/30/round5.html)
+
+Vitalik Buterin has written extensively on the success and failures of round 3, 4, and 5, which are linked above. Some of the concepts can be summarized below.
 
 Identity:
 
@@ -60,9 +58,15 @@ Saturation of the round:
 
 Discoverability of new grants:
 
-# Further Development
+Asymmetry of donations:
 
-# Additional Reading
+## Problems Observed in Gitoin Grants Round [6](https://vitalik.ca/general/2020/07/21/round6.html)
+
+
+
+
+
+## Additional Reading
 
 Foundations:
 
@@ -108,3 +112,5 @@ Gitcoin Grants Round 5: Funding Our Future](https://gitcoin.co/blog/gitcoin-gran
 [Vitalik's Blog - Review of Gitcoin Quadratic Funding Round 4](https://vitalik.ca/general/2020/01/28/round4.html)
 
 [Vitalik's Blog - Gitcoin Grants Round 5 Retrospective](https://vitalik.ca/general/2020/04/30/round5.html)
+
+[Vitalik's Blog - Gitcoin Grants Round 6 Retrospective](https://vitalik.ca/general/2020/07/21/round6.html)
