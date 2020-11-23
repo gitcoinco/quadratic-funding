@@ -48,23 +48,13 @@ From Vitalik's blog, we can compare the effect of the pairwise mechanism with va
 
 While collusion can still happen, it is much easier to find. Matching pairs gives us a signal to find colluders, which can subsequently be confirmed through timestamps, frequency of donations, geographical location, and github account age.
 
-## Problems Observed in Gitcoin Grants Rounds [3](https://vitalik.ca/general/2019/10/24/gitcoin.html), [4](https://vitalik.ca/general/2020/01/28/round4.html), & [5](https://vitalik.ca/general/2020/04/30/round5.html)
+## Gitcoin Grant Round Summaries by Vitalik Buterin
 
-Vitalik Buterin has written extensively on the success and failures of round 3, 4, and 5, which are linked above. Some of the concepts can be summarized below.
-
-Identity:
-
-Saturation of the round:
-
-Discoverability of new grants:
-
-Asymmetry of donations:
-
-## Problems Observed in Gitoin Grants Round [6](https://vitalik.ca/general/2020/07/21/round6.html)
-
-
-
-
+- Gitcoin Grants Round [3](https://vitalik.ca/general/2019/10/24/gitcoin.html)
+- Gitcoin Grants Round [4](https://vitalik.ca/general/2020/01/28/round4.html)
+- Gitcoin Grants Round [5](https://vitalik.ca/general/2020/04/30/round5.html)
+- Gitcoin Grants Round [6](https://vitalik.ca/general/2020/07/21/round6.html)
+- Gitcoin Grants Round [7](https://vitalik.ca/general/2020/10/18/round7.html)
 
 ## Additional Reading
 
@@ -114,3 +104,5 @@ Gitcoin Grants Round 5: Funding Our Future](https://gitcoin.co/blog/gitcoin-gran
 [Vitalik's Blog - Gitcoin Grants Round 5 Retrospective](https://vitalik.ca/general/2020/04/30/round5.html)
 
 [Vitalik's Blog - Gitcoin Grants Round 6 Retrospective](https://vitalik.ca/general/2020/07/21/round6.html)
+
+[Vitalik's Blog - Gitcoin Grants Round 7 Retrospective](https://vitalik.ca/general/2020/10/18/round7.html)
