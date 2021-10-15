@@ -1,3 +1,5 @@
+Note:  This repo is out of date.  To checkout Gitcoin's QF Protocol go to https://github.com/dcgtc/dgrants/
+
 # Gitcoin Grants Quadratic Funding Implementation
 
 ## Quadratic Funding
