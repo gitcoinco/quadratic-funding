@@ -181,7 +181,7 @@ def calculate_clr(aggregated_contributions, pair_totals, threshold, total_pot):
             for k2, v2 in contribz.items():
                 if k2 > k1:
                     # quadratic formula
-                    tot += ((v1 * v2) ** 0.5) / (pair_totals[k1][k2] / (threshold + 1))
+                    tot += ((v1 * v2) ** 0.5) / (pair_totals[k1][k2] + threshold))
 
         if type(tot) == complex:
             tot = float(tot.real)
